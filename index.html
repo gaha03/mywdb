@@ -114,46 +114,6 @@
             margin-bottom: 20px; /* 문단 간 간격 추가 */
             animation: fadeInDown 1s ease-in-out; /* 아래에서 위로 나타나는 효과 */
         }
-        .commission-container {
-            max-width: 700px;
-            margin: 60px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            animation: fadeInDown 1s ease-in-out; /* 서서히 나타나는 효과 */
-        }
-        
-
-        h1.commission-title { color: #2c3e50; font-size: 2.5em; margin-bottom: 10px; text-align: center; }
-        p.commission-desc { color: #7f8c8d; font-size: 1.1em; margin-bottom: 30px; text-align: center; }
-        label { display: block; font-weight: bold; margin: 15px 0 5px; color: #34495e; }
-        input[type="text"], input[type="email"], textarea {
-            width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;
-            font-size: 1em; transition: border-color 0.3s ease;
-        }
-        input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
-            border-color: #3498db; outline: none; box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
-        }
-        textarea { resize: vertical; min-height: 120px; }
-        button {
-            width: 100%; padding: 12px; background-color: #3498db; color: white; border: none;
-            border-radius: 5px; font-size: 1.1em; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease;
-            margin-top: 20px;
-        }
-        button:hover { background-color: #2980b9; }
-        button:active { background-color: #1f6a93; }
-        #orderConfirmation {
-            display: none; margin-top: 20px; padding: 15px; background-color: #e8f5e9; color: #2e7d32;
-            border-radius: 5px; font-size: 1.2em; text-align: center;
-        }
-
-        @media (max-width: 600px) {
-            .commission-container, .intro-section { margin: 20px; padding: 15px; }
-            .header-banner h1 { font-size: 2.5em; }
-            .header-banner p { font-size: 1.2em; }
-            .banner-button { font-size: 1em; padding: 10px 20px; }
-        }
     </style>
 </head>
 <body>
@@ -214,38 +174,6 @@
             Email: commission@artstudio.com
         </p>
     </div>
-    <!-- 커미션 양식 -->
-    <div class="commission-container">
-        <h1 class="commission-title">커미션 주문</h1>
-        <p class="commission-desc">원하는 작업을 아래 양식에 작성해 주세요!</p>
-
-        <form id="commissionForm" action="#" method="post">
-            <label for="name">이름:</label>
-            <input type="text" id="name" name="name" placeholder="이름을 입력하세요" required>
-
-            <label for="email">이메일:</label>
-            <input type="email" id="email" name="email" placeholder="이메일을 입력하세요" required>
-
-            <label for="type">커미션 유형:</label>
-            <input type="text" id="type" name="type" placeholder="예: 초상화, 풍경화 등" required>
-
-            <label for="details">세부 사항:</label>
-            <textarea id="details" name="details" placeholder="원하는 스타일, 크기, 기타 요청사항을 적어주세요" required></textarea>
-
-            <button type="submit">주문하기</button>
-        </form>
-
-        <div id="orderConfirmation">주문이 완료되었습니다!</div>
-    </div>
-
-    <script>
-        document.getElementById('commissionForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            document.getElementById('commissionForm').style.display = 'none';
-            document.getElementById('orderConfirmation').style.display = 'block';
-        });
-        
-    </script>
 </body>
 </html>
 
